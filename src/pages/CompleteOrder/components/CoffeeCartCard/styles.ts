@@ -15,6 +15,10 @@ export const CoffeeCartCardContainer = styled.div`
     align-items: center;
     gap: 1.25rem;
 
+    @media (max-width: 1000px) {
+      display: block;
+    }
+
     img {
       width: 4rem;
       height: 4rem;
@@ -24,6 +28,14 @@ export const CoffeeCartCardContainer = styled.div`
   > p {
     align-self: flex-start;
     font-weight: 700;
+
+    @media (max-width: 1000px) {
+      margin-left: 2rem;
+    }
+
+    @media (max-width: 550px) {
+      align-self: center;
+    }
   }
 `;
 

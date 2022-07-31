@@ -19,6 +19,10 @@ export const IntroContainer = styled.section`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media (max-width: 550px) {
+    height: 54rem;
+  }
 `;
 
 export const IntroContent = styled.div`
@@ -27,6 +31,13 @@ export const IntroContent = styled.div`
   align-items: center;
   justify-content: space-between;
   gap: 3.5rem;
+
+  @media (max-width: 550px) {
+    display: block;
+    img {
+      width: 100%;
+    }
+  }
 `;
 
 export const IntroTitle = styled(TitleText)`

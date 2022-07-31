@@ -28,6 +28,10 @@ export const InputStyleContainer = styled.div<InputContainerProps>`
   justify-content: space-between;
   overflow: hidden;
 
+  @media (max-width: 550px) {
+    margin-top: 5px;
+  }
+
   &:focus-within {
     border-color: ${({ theme }) => theme.colors["brand-yellow-dark"]};
   }
