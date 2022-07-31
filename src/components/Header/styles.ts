@@ -26,6 +26,19 @@ export const HeaderButtonsContainer = styled.div`
   gap: 0.75rem;
 `;
 
+export const ButtonDarkLight = styled.button`
+  border: none;
+  min-width: 2.3rem;
+  height: 2.3rem;
+  border-radius: 5px;
+  background: ${({ theme }) => theme.colors["brand-yellow-light"]};
+  color: ${({ theme }) => theme.colors["brand-yellow-dark"]};
+
+  &:hover {
+    color: ${({ theme }) => theme.colors["brand-yellow"]};
+  }
+`;
+
 interface HeaderButtonProps {
   variant: "purple" | "yellow";
 }

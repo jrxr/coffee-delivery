@@ -1,15 +1,24 @@
+import { useContext } from "react";
 import {
+  ButtonDarkLight,
   HeaderButton,
   HeaderButtonsContainer,
   HeaderContainer,
 } from "./styles";
 import coffeeLogoImg from "../../assets/coffee-delivery-logo.svg";
-import { MapPin, ShoppingCart } from "phosphor-react";
+import { MapPin, ShoppingCart, Sun, Moon } from "phosphor-react";
 import { NavLink } from "react-router-dom";
 import { useCart } from "../../hooks/useCart";
 
+import { ThemeContext } from "../../App";
+
 export function Header() {
   const { cartQuantity } = useCart();
+  const { toogleTheme, theme } = useContext(ThemeContext);
+
+  function handleToogleTheme() {
+    toogleTheme();
+  }
 
   return (
     <HeaderContainer>
@@ -29,6 +38,9 @@ export function Header() {
               <ShoppingCart size={20} weight="fill" />
             </HeaderButton>
           </NavLink>
+          <ButtonDarkLight onClick={handleToogleTheme}>
+            {theme === "default" ? <Sun size={24} /> : <Moon size={24} />}
+          </ButtonDarkLight>
         </HeaderButtonsContainer>
       </div>
     </HeaderContainer>
