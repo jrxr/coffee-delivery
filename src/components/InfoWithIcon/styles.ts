@@ -4,6 +4,7 @@ export const InfoWithIconContainer = styled.div`
   display: flex;
   align-items: center;
   gap: 0.75rem;
+  width: 50%;
 `;
 
 interface IconsContainerProps {

@@ -12,6 +12,16 @@ export const HeaderContainer = styled.header`
   left: 0;
   z-index: 5;
 
+  @media (max-width: 1000px) {
+    height: 5rem;
+    position: sticky;
+  }
+
+  @media (max-width: 550px) {
+    height: 5rem;
+    position: sticky;
+  }
+
   > div {
     width: 100%;
     display: flex;

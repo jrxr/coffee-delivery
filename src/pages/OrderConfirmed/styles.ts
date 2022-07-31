@@ -6,6 +6,14 @@ export const OrderConfirmedContainer = styled.div`
   gap: 2.5rem;
   margin-top: 5rem;
 
+  @media (max-width: 1000px) {
+    margin-top: 3.5rem;
+  }
+
+  @media (max-width: 550px) {
+    margin-top: 2rem;
+  }
+
   h1 {
     color: ${({ theme }) => theme.colors["brand-yellow-dark"]};
   }
@@ -14,6 +22,20 @@ export const OrderConfirmedContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @media (max-width: 1000px) {
+      width: 80%;
+      display: block;
+    }
+
+    @media (max-width: 550px) {
+      width: 100%;
+      display: block;
+
+      img {
+        width: 100%;
+      }
+    }
   }
 `;
 
@@ -26,6 +48,10 @@ export const OrderDetailsContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 2rem;
+
+  @media (max-width: 550px) {
+    min-width: 25rem;
+  }
 
   &::before {
     content: "";
